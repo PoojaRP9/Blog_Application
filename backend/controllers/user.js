@@ -10,11 +10,11 @@ async function userSignup(req, res) {
             console.log("login");
             const data = req.body;
             console.log(data);
-            // Hash the password before saving the user
+            
             const hashedPassword = await bcrypt.hash(data.password, 10);
 
             const user = await User.create({
-                name: data.name,
+                username: data.username,
                 email: data.email,
                 contact: data.contact,
                 password: hashedPassword
@@ -53,4 +53,4 @@ async function userLogin(req, res) {
     }
 }
 
-module.exports = { userSignup, userLogin }
+module.exports= {userLogin,userSignup};

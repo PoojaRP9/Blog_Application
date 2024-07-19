@@ -6,7 +6,7 @@ const BASEURL = 'http://localhost:8000'
 import './App.css'
 import Home from './components/home'
 import Signup from './components/signup';
-// import Home from './components/home';
+
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,7 +17,7 @@ function App() {
     <Router>
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/signup" Component={Signup } />
+      <Route path="/signup" element={<Signup /> } />
     </Routes>
   </Router>,
     </>
